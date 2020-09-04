@@ -1,12 +1,18 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hi I'm Tanishq</h1>
-    </div>
-  );
+import Layout from './components/Layout/Layout';
+import BurgerBuilder from './container/BurgerBulder/BurgerBuilder';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Layout>
+          <BurgerBuilder />  
+        </Layout>
+      </div>
+    );
+  }
 }
 
 export default App;
