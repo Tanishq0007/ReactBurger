@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../../../HigerOrderComponent/Auxilliary'
+import Aux from '../../../HigerOrderComponent/Auxilliary';
 
 const orderSummary = (props) => {
     const ingredientSummary = Object.keys(props.ingredients)
@@ -17,6 +17,7 @@ const orderSummary = (props) => {
                 {ingredientSummary}
             </ul>
             <p>Continue to Checkout ?</p>
+            <p>The Total Amount is {props.price.toFixed(2)}</p>
         </Aux>
     )
 };
