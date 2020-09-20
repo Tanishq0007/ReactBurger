@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './NavigationItem.css'
+import styles from './NavigationItem.module.css';
 
 const navigationItem = (props) => (
-<li className='NavigationItem'>
+<li className={styles.NavigationItem}>
     <a 
     href={props.link}
-    className={props.active ? 'active' : null } >
+    className={props.active ? styles.active : null } >
         {props.children}
     </a>
 </li>

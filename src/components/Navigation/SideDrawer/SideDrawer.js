@@ -2,21 +2,22 @@ import React from 'react';
 
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import './SideDrawer.css';
+import styles from './SideDrawer.module.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import Aux from '../../../HigerOrderComponent/Auxilliary';
 
 const sideDrawer = (props) => {
-    let attachedClasses = ['SideDrawer Close'];
+    let attachedClasses = [styles.SideDrawer, styles.Close];
     if (props.open) {
-        attachedClasses = ['SideDrawer Open'];
+        attachedClasses = [styles.SideDrawer, styles.Open];
     }
-    
     return(
         <Aux>
-            <Backdrop show = {props.open} clicked = {props.closed}/>
-            <div className={attachedClasses}>
-                <Logo height=" 11% " marginBottom= "32px" />
+            <Backdrop show = {props.open} clicked={props.closed}/>
+            <div className={attachedClasses.join(' ')}>
+                <div className={styles.Logo}>
+                    <Logo />
+                </div>
                 <nav>
                     <NavigationItems />
                 </nav>

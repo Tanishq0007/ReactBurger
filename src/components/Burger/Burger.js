@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Burger.css';
+import styles from './Burger.module.css';
 import BurgerIngridients from './BurgerIngridients/BurgerIngridients';
 
 const burger = (props) => {
@@ -16,9 +16,8 @@ const burger = (props) => {
     if (transformedIngridients.length === 0) {
         transformedIngridients = <p>Please Start Adding Ingridients!</p>;
     }
-    console.log(transformedIngridients);
     return ( 
-        <div className='Burger'>
+        <div className={styles.Burger}>
             <BurgerIngridients type="bread-top" />
             {transformedIngridients}
             <BurgerIngridients type="bread-bottom" />
